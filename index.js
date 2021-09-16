@@ -71,6 +71,11 @@ client.on("messageCreate", async (message) => {
         console.error(err)
       });
   }
+
+  if(message.content === ":setel" || message.content === ":p") {
+    const command = client.commands.get("setel");
+    command.execute(interaction, player);
+  }
 });
 
 client.on('interactionCreate', async interaction => {
